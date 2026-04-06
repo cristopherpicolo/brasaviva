@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- =============================================
+       BRASA VIVA - Restaurante & Churrascaria
+       Desenvolvido com HTML5, CSS3 e JavaScript puro
+       ============================================= -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ===== SEO META TAGS ===== -->
+  <title>Brasa Viva | Restaurante & Churrascaria em Vacaria - RS</title>
+  <meta name="description" content="O melhor churrasco de Vacaria te espera! Buffet, rodízio e pratos feitos com qualidade e tradição. Venha viver a experiência Brasa Viva na BR-116, Vacaria - RS." />
+  <meta name="keywords" content="churrascaria vacaria, restaurante vacaria, buffet vacaria, rodízio vacaria, brasa viva, churrasco rs, comida caseira vacaria" />
+  <meta name="author" content="Brasa Viva Restaurante" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- ===== OPEN GRAPH (Redes Sociais) ===== -->
+  <meta property="og:title" content="Brasa Viva | Restaurante & Churrascaria em Vacaria - RS" />
+  <meta property="og:description" content="O melhor churrasco de Vacaria te espera! Buffet, rodízio e pratos feitos com qualidade e tradição." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://brasaviva.com.br" />
+  <meta property="og:locale" content="pt_BR" />
+
+  <!-- ===== FAVICON ===== -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>" />
+
+  <!-- ===== GOOGLE FONTS ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+
+  <!-- ===== FONT AWESOME (Ícones) ===== -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- ===== FOLHA DE ESTILOS PRINCIPAL ===== -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ======================================================
+       NAVEGAÇÃO FIXA NO TOPO
+  ====================================================== -->
+  <header id="header" class="header">
+    <nav class="navbar container">
+
+      <!-- Logo -->
+      <a href="#home" class="logo" aria-label="Brasa Viva - Página Inicial">
+        <span class="logo-icon">🔥</span>
+        <div class="logo-text">
+          <span class="logo-name">Brasa Viva</span>
+          <span class="logo-sub">Restaurante & Churrascaria</span>
+        </div>
+      </a>
+
+      <!-- Menu Desktop -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home"     class="nav-link">Início</a></li>
+        <li><a href="#sobre"    class="nav-link">Sobre</a></li>
+        <li><a href="#cardapio" class="nav-link">Cardápio</a></li>
+        <li><a href="#avaliacoes" class="nav-link">Avaliações</a></li>
+        <li><a href="#contato"  class="nav-link">Contato</a></li>
+        <li>
+          <a href="https://wa.me/5554999999999?text=Olá!%20Quero%20fazer%20um%20pedido%20na%20Brasa%20Viva!"
+             class="nav-cta" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+          </a>
+        </li>
+      </ul>
+
+      <!-- Botão Hambúrguer (Mobile) -->
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+    </nav>
+  </header>
+
+  <!-- Overlay do menu mobile -->
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- ======================================================
+       SEÇÃO 1 — HOME / BANNER PRINCIPAL
+  ====================================================== -->
+  <section id="home" class="hero">
+
+    <!-- Partículas de brasa animadas -->
+    <div class="embers" aria-hidden="true">
+      <span class="ember"></span><span class="ember"></span>
+      <span class="ember"></span><span class="ember"></span>
+      <span class="ember"></span><span class="ember"></span>
+      <span class="ember"></span><span class="ember"></span>
+      <span class="ember"></span><span class="ember"></span>
+      <span class="ember"></span><span class="ember"></span>
+    </div>
+
+    <!-- Overlay escuro sobre o banner -->
+    <div class="hero-overlay"></div>
+
+    <!-- Conteúdo central do hero -->
+    <div class="hero-content container">
+      <p class="hero-eyebrow reveal-up">🔥 Vacaria — RS</p>
+      <h1 class="hero-title reveal-up">
+        O melhor churrasco<br />
+        <span class="highlight">de Vacaria</span><br />
+        te espera!
+      </h1>
+      <p class="hero-subtitle reveal-up">
+        Tradição, sabor e aquele calor de brasa que só a gente sabe fazer.
+        Família, amigos e muita carne na mesa!
+      </p>
+      <div class="hero-buttons reveal-up">
+        <a href="#cardapio" class="btn btn-primary">
+          <i class="fas fa-utensils"></i> Ver Cardápio
+        </a>
+        <a href="https://wa.me/5554999999999?text=Olá!%20Quero%20fazer%20um%20pedido%20na%20Brasa%20Viva!"
+           class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-whatsapp"></i> Pedir no WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <a href="#destaques" class="scroll-down" aria-label="Rolar para baixo">
+      <i class="fas fa-chevron-down"></i>
+    </a>
+
+  </section>
+
+  <!-- ======================================================
+       SEÇÃO 1.5 — DESTAQUES / DIFERENCIAIS
+  ====================================================== -->
+  <section id="destaques" class="destaques">
+    <div class="container">
+      <div class="destaques-grid">
+
+        <div class="destaque-card reveal-up">
+          <div class="destaque-icon"><i class="fas fa-users"></i></div>
+          <h3>Ambiente Familiar</h3>
+          <p>Um espaço acolhedor, pensado para reunir família e amigos em torno da boa mesa.</p>
+        </div>
+
+        <div class="destaque-card reveal-up" style="--delay: 0.15s">
+          <div class="destaque-icon"><i class="fas fa-tag"></i></div>
+          <h3>Preço Acessível</h3>
+          <p>Qualidade premium sem pesar no bolso. Buffet e rodízio com o melhor custo-benefício da região.</p>
+        </div>
+
+        <div class="destaque-card reveal-up" style="--delay: 0.3s">
+          <div class="destaque-icon"><i class="fas fa-heart"></i></div>
+          <h3>Comida Caseira</h3>
+          <p>Feito com amor e ingredientes frescos. Cada prato tem o sabor da cozinha da vovó.</p>
+        </div>
+
+        <div class="destaque-card reveal-up" style="--delay: 0.45s">
+          <div class="destaque-icon"><i class="fas fa-fire-flame-curved"></i></div>
+          <h3>Brasa Artesanal</h3>
+          <p>Carnes assadas no ponto certo, na brasa de lenha. Aquele sabor defumado inconfundível.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       SEÇÃO 2 — SOBRE NÓS
+  ====================================================== -->
+  <section id="sobre" class="sobre">
+    <div class="container">
+
+      <div class="sobre-grid">
+
+        <!-- Coluna de imagem / visual -->
+        <div class="sobre-visual reveal-left">
+          <div class="sobre-img-wrapper">
+            <!-- Imagem ilustrativa via CSS com gradiente e ícone -->
+            <div class="sobre-img-placeholder">
+              <span class="sobre-flame">🔥</span>
+              <p>Desde 2010<br/>fazendo história</p>
+            </div>
+            <!-- Badge flutuante -->
+            <div class="sobre-badge">
+              <span class="badge-number">15+</span>
+              <span class="badge-text">anos de tradição</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coluna de texto -->
+        <div class="sobre-texto reveal-right">
+          <span class="section-label">Nossa História</span>
+          <h2 class="section-title">Tradição e sabor<br /><span class="highlight">desde o primeiro dia</span></h2>
+          <p>
+            A <strong>Brasa Viva</strong> nasceu do amor pela culinária gaúcha e pela arte do churrasco. 
+            Localizada na <strong>BR-116 em Vacaria - RS</strong>, nossa churrascaria é ponto de encontro de 
+            famílias, viajantes e apreciadores do bom paladar há mais de 15 anos.
+          </p>
+          <p>
+            Aqui, cada carne é selecionada com cuidado, temperada na medida certa e assada na brasa até 
+            atingir o ponto perfeito. Nosso <strong>buffet completo</strong> e o <strong>rodízio de carnes</strong> 
+            oferecem uma experiência gastronômica rica e variada, com mais de 40 opções de pratos quentes, 
+            frios e sobremesas.
+          </p>
+          <p>
+            Venha nos visitar e descobrir por que somos o restaurante mais querido da região!
+          </p>
+
+          <!-- Estatísticas rápidas -->
+          <div class="sobre-stats">
+            <div class="stat">
+              <span class="stat-num">40+</span>
+              <span class="stat-label">Opções no buffet</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">12</span>
+              <span class="stat-label">Cortes de carne</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">4.1</span>
+              <span class="stat-label">Avaliação média ⭐</span>
+            </div>
+          </div>
+
+          <a href="#cardapio" class="btn btn-primary" style="margin-top:1.5rem">
+            <i class="fas fa-book-open"></i> Conhecer o Cardápio
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       SEÇÃO 3 — CARDÁPIO
+  ====================================================== -->
+  <section id="cardapio" class="cardapio">
+    <div class="container">
+
+      <div class="section-header reveal-up">
+        <span class="section-label">O que servimos</span>
+        <h2 class="section-title">Nosso <span class="highlight">Cardápio</span></h2>
+        <p class="section-desc">Escolha seu favorito ou venha e experimente tudo no buffet!</p>
+      </div>
+
+      <!-- Abas do cardápio -->
+      <div class="cardapio-tabs reveal-up">
+        <button class="tab-btn active" data-tab="churrasco">🥩 Churrasco</button>
+        <button class="tab-btn" data-tab="buffet">🍽️ Buffet</button>
+        <button class="tab-btn" data-tab="pratos">🍲 Pratos Feitos</button>
+        <button class="tab-btn" data-tab="sobremesas">🍮 Sobremesas</button>
+      </div>
+
+      <!-- ── ABA: CHURRASCO ── -->
+      <div class="tab-content active" id="tab-churrasco">
+        <div class="menu-grid">
+
+          <div class="menu-card reveal-up">
+            <div class="menu-card-img churrasco-1">
+              <span class="menu-emoji">🥩</span>
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h4>Picanha na Brasa</h4>
+                <span class="menu-badge popular">Popular</span>
+              </div>
+              <p>A rainha do churrasco! Picanha maturada, temperada com sal grosso e assada na brasa de lenha.</p>
+              <div class="menu-card-footer">
+                <span class="menu-price">R$ 89,90 <small>/kg</small></span>
+                <a href="https://wa.me/5554999999999?text=Quero%20pedir%20Picanha%20na%20Brasa!" class="menu-btn" target="_blank">Pedir</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card reveal-up" style="--delay:0.1s">
+            <div class="menu-card-img churrasco-2">
+              <span class="menu-emoji">🍖</span>
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h4>Costela Gaúcha</h4>
+                <span class="menu-badge"></span>
+              </div>
+              <p>Costela de chão assada lentamente por horas. Carne desmanchando, sabor incomparável.</p>
+              <div class="menu-card-footer">
+                <span class="menu-price">R$ 79,90 <small>/kg</small></span>
+                <a href="https://wa.me/5554999999999?text=Quero%20pedir%20Costela%20Gaúcha!" class="menu-btn" target="_blank">Pedir</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card reveal-up" style="--delay:0.2s">
+            <div class="menu-card-img churrasco-3">
+              <span class="menu-emoji">🔥</span>
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h4>Fraldinha Grelhada</h4>
+                <span class="menu-badge"></span>
+              </div>
+              <p>Corte macio e suculento, grelhado no ponto certo. Perfeita para quem prefere algo mais leve.</p>
+              <div class="menu-card-footer">
+                <span class="menu-price">R$ 74,90 <small>/kg</small></span>
+                <a href="https://wa.me/5554999999999?text=Quero%20pedir%20Fraldinha!" class="menu-btn" target="_blank">Pedir</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card reveal-up" style="--delay:0.3s">
+            <div class="menu-card-img churrasco-4">
+              <span class="menu-emoji">🌭</span>
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h4>Linguiça Artesanal</h4>
+                <span class="menu-badge destaque">Destaque</span>
+              </div>
+              <p>Linguiça caseira temperada com ervas frescas. Crocante por fora, suculenta por dentro.</p>
+              <div class="menu-card-footer">
+                <span class="menu-price">R$ 49,90 <small>/kg</small></span>
+                <a href="https://wa.me/5554999999999?text=Quero%20pedir%20Linguiça%20Artesanal!" class="menu-btn" target="_blank">Pedir</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card reveal-up" style="--delay:0.4s">
+            <div class="menu-card-img churrasco-5">
+              <span class="menu-emoji">🥓</span>
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h4>Maminha ao Alho</h4>
+                <span class="menu-badge"></span>
+              </div>
+              <p>Maminha marinada no alho e ervas, assada no espeto. Maciez garantida em cada fatia.</p>
+              <div class="menu-card-footer">
+                <span class="menu-price">R$ 69,90 <small>/kg</small></span>
+                <a href="https://wa.me/5554999999999?text=Quero%20pedir%20Maminha%20ao%20Alho!" class="menu-btn" target="_blank">Pedir</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card reveal-up" style="--delay:0.5s">
+            <div class="menu-card-img churrasco-6">
+              <span class="menu-emoji">🍗</span>
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h4>Frango na Brasa</h4>
+                <span class="menu-badge"></span>
+              </div>
+              <p>Frango inteiro marinado e assado lentamente na brasa. Crocante, dourado e irresistível.</p>
+              <div class="menu-card-footer">
+                <span class="menu-price">R$ 44,90 <small>/unid.</small></span>
+                <a href="https://wa.me/5554999999999?text=Quero%20pedir%20Frango%20na%20Brasa!" class="menu-btn" target="_blank">Pedir</a>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /menu-grid churrasco -->
+      </div>
+
+      <!-- ── ABA: BUFFET ── -->
+      <div class="tab-content" id="tab-buffet">
+        <div class="buffet-info reveal-up">
+          <div class="buffet-badge">
+            <i class="fas fa-award"></i>
+            <div>
+              <strong>Buffet Livre por Pessoa</strong>
+              <span>Tudo que você quiser, quantas vezes quiser!</span>
+            </div>
+            <span class="buffet-price-big">R$ 59,90</span>
+          </div>
+        </div>
+        <div class="menu-grid">
+
+          <div class="menu-card reveal-up">
+            <div class="menu-card-img buffet-1"><span class="menu-emoji">🥗</span></div>
+            <div class="menu-card-body">
+              <h4>Saladas Frescas</h4>
+              <p>Mais de 15 opções de saladas frias: caesar, caprese, mix de folhas, maionese e muito mais.</p>
+              <div class="menu-card-footer">
+                <span class="menu-price">Incluso no buffet</span>
+                <span class="menu-tag">🥗 Frios</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card reveal-up" style="--delay:0.1s">
+            <div class="menu-card-img buffet-2"><span class="menu-emoji">🍛</span></div>
+            <div class="menu-card-body">
+              <h4>Pratos Quentes</h4>
+              <p>Arroz, feijão, farofa, macarrão, strogonoff, frango, carne moída e acompanhamentos variados.</p>
+              <div class="menu-card-footer">
+                <span class="menu-price">Incluso no buffet</span>
+                <span class="menu-tag">🍲 Quentes</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card reveal-up" style="--delay:0.2s">
+            <div class="menu-card-img buffet-3"><span class="menu-emoji">🥩</span></div>
+            <div class="menu-card-body">
+              <h4>Carnes Assadas</h4>
+              <p>Rodízio de carnes na brasa: picanha, costela, frango, linguiça e mais. Trazidas na espada!</p>
+              <div class="menu-card-footer">
+                <span class="menu-price">Incluso no buffet</span>
+                <span class="menu-tag">🔥 Brasa</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card reveal-up" style="--delay:0.3s">
+            <div class="menu-card-img buffet-4"><span class="menu-emoji">🍞</span></div>
+            <div class="menu-card-body">
+              <h4>Pão de Alho & Entrada</h4>
+              <p>Pão de alho artesanal, caldo de costela e couvert especial da casa para começar bem.</p>
+              <div class="menu-card-footer">
+                <span class="menu-price">Incluso no buffet</span>
+                <span class="menu-tag">🥖 Entrada</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── ABA: PRATOS FEITOS ── -->
+      <div class="tab-content" id="tab-pratos">
+        <div class="menu-grid">
+
+          <div class="menu-card reveal-up">
+            <div class="menu-card-img pf-1"><span class="menu-emoji">🍖</span></div>
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h4>PF Executivo</h4>
+                <span class="menu-badge popular">+ Pedido</span>
+              </div>
+              <p>Carne bovina + arroz + feijão + macarrão ou salada. Porção generosa para matar a fome!</p>
+              <div class="menu-card-footer">
+                <span class="menu-price">R$ 32,90</span>
+                <a href="https://wa.me/5554999999999?text=Quero%20pedir%20PF%20Executivo!" class="menu-btn" target="_blank">Pedir</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card reveal-up" style="--delay:0.1s">
+            <div class="menu-card-img pf-2"><span class="menu-emoji">🍗</span></div>
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h4>Frango Grelhado</h4>
+                <span class="menu-badge"></span>
+              </div>
+              <p>Peito de frango grelhado temperado + arroz + feijão + salada fresca. Leve e saboroso.</p>
+              <div class="menu-card-footer">
+                <span class="menu-price">R$ 28,90</span>
+                <a href="https://wa.me/5554999999999?text=Quero%20pedir%20Frango%20Grelhado!" class="menu-btn" target="_blank">Pedir</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card reveal-up" style="--delay:0.2s">
+            <div class="menu-card-img pf-3"><span class="menu-emoji">🐟</span></div>
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h4>Peixe na Brasa</h4>
+                <span class="menu-badge destaque">Especial</span>
+              </div>
+              <p>Tilápia ou corvina na brasa com limão e ervas. Acompanha arroz, pirão e salada.</p>
+              <div class="menu-card-footer">
+                <span class="menu-price">R$ 39,90</span>
+                <a href="https://wa.me/5554999999999?text=Quero%20pedir%20Peixe%20na%20Brasa!" class="menu-btn" target="_blank">Pedir</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card reveal-up" style="--delay:0.3s">
+            <div class="menu-card-img pf-4"><span class="menu-emoji">🥩</span></div>
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h4>Bife ao Molho</h4>
+                <span class="menu-badge"></span>
+              </div>
+              <p>Bife de carne bovina ao molho especial da casa. Acompanha arroz, feijão e batata frita.</p>
+              <div class="menu-card-footer">
+                <span class="menu-price">R$ 35,90</span>
+                <a href="https://wa.me/5554999999999?text=Quero%20pedir%20Bife%20ao%20Molho!" class="menu-btn" target="_blank">Pedir</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card reveal-up" style="--delay:0.4s">
+            <div class="menu-card-img pf-5"><span class="menu-emoji">🍝</span></div>
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h4>Strogonoff de Frango</h4>
+                <span class="menu-badge"></span>
+              </div>
+              <p>Strogonoff cremoso feito na hora com champignon. Acompanha arroz e batata palha.</p>
+              <div class="menu-card-footer">
+                <span class="menu-price">R$ 33,90</span>
+                <a href="https://wa.me/5554999999999?text=Quero%20pedir%20Strogonoff!" class="menu-btn" target="_blank">Pedir</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card reveal-up" style="--delay:0.5s">
+            <div class="menu-card-img pf-6"><span class="menu-emoji">🍜</span></div>
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h4>Feijoada Completa</h4>
+                <span class="menu-badge">Sáb. e Dom.</span>
+              </div>
+              <p>Feijoada tradicional gaúcha com costela, linguiça e paio. Acompanha couve, laranja e farofa.</p>
+              <div class="menu-card-footer">
+                <span class="menu-price">R$ 42,90</span>
+                <a href="https://wa.me/5554999999999?text=Quero%20pedir%20Feijoada!" class="menu-btn" target="_blank">Pedir</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── ABA: SOBREMESAS ── -->
+      <div class="tab-content" id="tab-sobremesas">
+        <div class="menu-grid">
+
+          <div class="menu-card reveal-up">
+            <div class="menu-card-img sob-1"><span class="menu-emoji">🍮</span></div>
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h4>Pudim de Leite</h4>
+                <span class="menu-badge popular">Favorito</span>
+              </div>
+              <p>Pudim cremoso de leite condensado feito na hora. A sobremesa mais pedida da casa!</p>
+              <div class="menu-card-footer">
+                <span class="menu-price">R$ 12,90</span>
+                <a href="https://wa.me/5554999999999?text=Quero%20pedir%20Pudim!" class="menu-btn" target="_blank">Pedir</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card reveal-up" style="--delay:0.1s">
+            <div class="menu-card-img sob-2"><span class="menu-emoji">🍦</span></div>
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h4>Sorvete Artesanal</h4>
+                <span class="menu-badge"></span>
+              </div>
+              <p>Sorvetes cremosos nos sabores creme, chocolate, morango e coco. 2 bolas por porção.</p>
+              <div class="menu-card-footer">
+                <span class="menu-price">R$ 10,90</span>
+                <a href="https://wa.me/5554999999999?text=Quero%20pedir%20Sorvete!" class="menu-btn" target="_blank">Pedir</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card reveal-up" style="--delay:0.2s">
+            <div class="menu-card-img sob-3"><span class="menu-emoji">🎂</span></div>
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h4>Torta da Casa</h4>
+                <span class="menu-badge destaque">Chef</span>
+              </div>
+              <p>Torta gelada de limão ou chocolate com cobertura especial. Receita exclusiva da Brasa Viva.</p>
+              <div class="menu-card-footer">
+                <span class="menu-price">R$ 14,90</span>
+                <a href="https://wa.me/5554999999999?text=Quero%20pedir%20Torta%20da%20Casa!" class="menu-btn" target="_blank">Pedir</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card reveal-up" style="--delay:0.3s">
+            <div class="menu-card-img sob-4"><span class="menu-emoji">🍰</span></div>
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h4>Petit Gâteau</h4>
+                <span class="menu-badge"></span>
+              </div>
+              <p>Bolinho quente de chocolate com coração derretido, servido com bola de sorvete de creme.</p>
+              <div class="menu-card-footer">
+                <span class="menu-price">R$ 18,90</span>
+                <a href="https://wa.me/5554999999999?text=Quero%20pedir%20Petit%20Gâteau!" class="menu-btn" target="_blank">Pedir</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Nota sobre rodízio -->
+      <div class="cardapio-note reveal-up">
+        <i class="fas fa-info-circle"></i>
+        <p>🎉 Rodízio completo disponível! Fale pelo WhatsApp para reservar sua mesa ou montar um combo especial para grupos.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================
+       SEÇÃO 4 — AVALIAÇÕES
+  ====================================================== -->
+  <section id="avaliacoes" class="avaliacoes">
+    <div class="container">
+
+      <div class="section-header reveal-up">
+        <span class="section-label">O que dizem nossos clientes</span>
+        <h2 class="section-title">Avaliações <span class="highlight">reais</span></h2>
+        <div class="rating-summary">
+          <div class="rating-big">
+            <span class="rating-number">4.1</span>
+            <div class="rating-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span class="rating-count">Baseado em 340+ avaliações</span>
+          </div>
+          <div class="rating-bars">
+            <div class="rating-bar"><span>5 ⭐</span><div class="bar"><div class="bar-fill" style="width:48%"></div></div><span>48%</span></div>
+            <div class="rating-bar"><span>4 ⭐</span><div class="bar"><div class="bar-fill" style="width:30%"></div></div><span>30%</span></div>
+            <div class="rating-bar"><span>3 ⭐</span><div class="bar"><div class="bar-fill" style="width:12%"></div></div><span>12%</span></div>
+            <div class="rating-bar"><span>2 ⭐</span><div class="bar"><div class="bar-fill" style="width:6%"></div></div><span>6%</span></div>
+            <div class="rating-bar"><span>1 ⭐</span><div class="bar"><div class="bar-fill" style="width:4%"></div></div><span>4%</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cards de avaliação -->
+      <div class="reviews-grid">
+
+        <div class="review-card reveal-up">
+          <div class="review-header">
+            <div class="review-avatar">MR</div>
+            <div>
+              <strong>Mariana Rodrigues</strong>
+              <span>Vacaria - RS</span>
+            </div>
+            <div class="review-stars ml-auto">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+          <p>"A melhor picanha que já comi na vida! O ambiente é super acolhedor, parece que você tá na casa da família. Fui no aniversário do meu marido e foi perfeito. Já marcamos a próxima visita!"</p>
+          <span class="review-date">Março, 2025</span>
+        </div>
+
+        <div class="review-card reveal-up" style="--delay:0.1s">
+          <div class="review-header">
+            <div class="review-avatar" style="background:var(--gold)">JS</div>
+            <div>
+              <strong>João Silveira</strong>
+              <span>Bento Gonçalves - RS</span>
+            </div>
+            <div class="review-stars ml-auto">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+          <p>"Parei aqui viajando pela BR-116 e que surpresa boa! O buffet é absurdo de completo. Paguei um preço justo e saí mais do que satisfeito. O atendimento é muito simpático. Recomendo demais!"</p>
+          <span class="review-date">Fevereiro, 2025</span>
+        </div>
+
+        <div class="review-card reveal-up" style="--delay:0.2s">
+          <div class="review-header">
+            <div class="review-avatar" style="background:#5a6a7a">AL</div>
+            <div>
+              <strong>Ana Lima</strong>
+              <span>Vacaria - RS</span>
+            </div>
+            <div class="review-stars ml-auto">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+          </div>
+          <p>"Costela de chão maravilhosa! Pedimos para um grupo de 10 pessoas e todo mundo amou. A linguiça artesanal então... sensacional! O pão de alho também é um crime de tão bom."</p>
+          <span class="review-date">Janeiro, 2025</span>
+        </div>
+
+        <div class="review-card reveal-up" style="--delay:0.3s">
+          <div class="review-header">
+            <div class="review-avatar" style="background:#7a3b5e">CT</div>
+            <div>
+              <strong>Carlos Teixeira</strong>
+              <span>Porto Alegre - RS</span>
+            </div>
+            <div class="review-stars ml-auto">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+          <p>"Vim de Porto Alegre especialmente para conhecer. Valeu cada quilômetro! O rodízio é muito farto, as carnes chegam sem parar. O ambiente é espaçoso e limpo. Com certeza voltarei!"</p>
+          <span class="review-date">Dezembro, 2024</span>
+        </div>
+
+        <div class="review-card reveal-up" style="--delay:0.4s">
+          <div class="review-header">
+            <div class="review-avatar" style="background:#3b7a5e">PS</div>
+            <div>
+              <strong>Patrícia Santos</strong>
+              <span>Caxias do Sul - RS</span>
+            </div>
+            <div class="review-stars ml-auto">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i><i class="far fa-star"></i>
+            </div>
+          </div>
+          <p>"A comida é muito boa, principalmente o churrasco. Na minha visita o atendimento poderia ter sido mais rápido pois estava cheio. Mas os pratos compensam! O pudim de sobremesa salvou tudo."</p>
+          <span class="review-date">Novembro, 2024</span>
+        </div>
+
+        <div class="review-card reveal-up" style="--delay:0.5s">
+          <div class="review-header">
+            <div class="review-avatar" style="background:#7a5a3b">RM</div>
+            <div>
+              <strong>Ricardo Melo</strong>
+              <span>Vacaria - RS</span>
+            </div>
+            <div class="review-stars ml-auto">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+          </div>
+          <p>"Frequento a Brasa Viva há anos! Sempre que quero comemorar algo especial com a família, é aqui que a gente vem. Qualidade constante, sempre gostoso. Um dos melhores restaurantes de Vacaria!"</p>
+          <span class="review-date">Outubro, 2024</span>
+        </div>
+
+      </div><!-- /reviews-grid -->
+
+    </div>
+  </section>
+
+  <!-- ======================================================
+       SEÇÃO 5 — CONTATO
+  ====================================================== -->
+  <section id="contato" class="contato">
+    <div class="container">
+
+      <div class="section-header reveal-up">
+        <span class="section-label">Fale conosco</span>
+        <h2 class="section-title">Venha nos <span class="highlight">visitar</span></h2>
+      </div>
+
+      <div class="contato-grid">
+
+        <!-- Informações de contato -->
+        <div class="contato-info reveal-left">
+
+          <div class="info-card">
+            <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <h4>Endereço</h4>
+              <p>BR-116, Km 190 — Vacaria - RS<br/>CEP: 95200-000</p>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
+            <div>
+              <h4>Telefone</h4>
+              <a href="tel:+5554999999999">(54) 9 9999-9999</a>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <div class="info-icon" style="background:var(--whatsapp)"><i class="fab fa-whatsapp"></i></div>
+            <div>
+              <h4>WhatsApp</h4>
+              <a href="https://wa.me/5554999999999?text=Olá!%20Quero%20fazer%20um%20pedido%20na%20Brasa%20Viva!"
+                 target="_blank" rel="noopener noreferrer">(54) 9 9999-9999</a>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <div class="info-icon" style="background:var(--gold)"><i class="fas fa-clock"></i></div>
+            <div>
+              <h4>Horário de Funcionamento</h4>
+              <p>
+                Seg–Sex: 11h às 15h / 18h às 22h<br />
+                Sáb–Dom: 11h às 23h<br />
+                <em>Feriados: consultar</em>
+              </p>
+            </div>
+          </div>
+
+          <!-- Botão WhatsApp grande -->
+          <a href="https://wa.me/5554999999999?text=Olá!%20Quero%20fazer%20uma%20reserva%20na%20Brasa%20Viva!"
+             class="btn btn-whatsapp btn-full" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-whatsapp"></i>
+            Reservar pelo WhatsApp
+          </a>
+
+        </div>
+
+        <!-- Mapa do Google -->
+        <div class="contato-mapa reveal-right">
+          <div class="mapa-wrapper">
+            <iframe
+              title="Localização Brasa Viva - Vacaria RS"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57413.84258596284!2d-50.93702882148937!3d-28.512039153695073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94e14ff0b7c96e33%3A0x3d03f28ae4b7c80c!2sVacaria%2C%20RS!5e0!3m2!1spt-BR!2sbr!4v1710000000000!5m2!1spt-BR!2sbr"
+              width="100%" height="400" style="border:0;" allowfullscreen=""
+              loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+          <div class="mapa-badge">
+            <i class="fas fa-map-pin"></i>
+            <span>BR-116, Vacaria - RS</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       SEÇÃO 6 — CTA FINAL (Chamada para Ação)
+  ====================================================== -->
+  <section class="cta-section">
+    <div class="cta-overlay"></div>
+    <div class="container cta-content reveal-up">
+      <h2>Pronto para a melhor experiência<br /><span class="highlight">de churrasco da sua vida?</span></h2>
+      <p>Faça sua reserva agora mesmo e garanta sua mesa!</p>
+      <div class="hero-buttons">
+        <a href="https://wa.me/5554999999999?text=Olá!%20Quero%20fazer%20uma%20reserva%20na%20Brasa%20Viva!"
+           class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-whatsapp"></i> Reservar Agora
+        </a>
+        <a href="tel:+5554999999999" class="btn btn-outline">
+          <i class="fas fa-phone"></i> Ligar Agora
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       RODAPÉ
+  ====================================================== -->
+  <footer class="footer">
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <!-- Coluna 1: Marca -->
+        <div class="footer-col">
+          <a href="#home" class="logo footer-logo">
+            <span class="logo-icon">🔥</span>
+            <div class="logo-text">
+              <span class="logo-name">Brasa Viva</span>
+              <span class="logo-sub">Restaurante & Churrascaria</span>
+            </div>
+          </a>
+          <p class="footer-desc">
+            Tradição, sabor e família desde 2010. O melhor churrasco de Vacaria - RS te espera na BR-116.
+          </p>
+          <!-- Redes Sociais -->
+          <div class="social-links">
+            <a href="https://facebook.com" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://instagram.com" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://wa.me/5554999999999" class="social-btn whatsapp-social" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Coluna 2: Links rápidos -->
+        <div class="footer-col">
+          <h4 class="footer-title">Menu</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Início</a></li>
+            <li><a href="#sobre">Sobre Nós</a></li>
+            <li><a href="#cardapio">Cardápio</a></li>
+            <li><a href="#avaliacoes">Avaliações</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </div>
+
+        <!-- Coluna 3: Horários -->
+        <div class="footer-col">
+          <h4 class="footer-title">Funcionamento</h4>
+          <ul class="footer-horarios">
+            <li><span>Segunda – Sexta</span><span>11h – 15h / 18h – 22h</span></li>
+            <li><span>Sábado</span><span>11h – 23h</span></li>
+            <li><span>Domingo</span><span>11h – 23h</span></li>
+            <li><span>Feriados</span><span>Consultar</span></li>
+          </ul>
+        </div>
+
+        <!-- Coluna 4: Contato -->
+        <div class="footer-col">
+          <h4 class="footer-title">Contato</h4>
+          <ul class="footer-contact">
+            <li><i class="fas fa-map-marker-alt"></i><span>BR-116, Km 190 — Vacaria - RS</span></li>
+            <li><i class="fas fa-phone"></i><a href="tel:+5554999999999">(54) 9 9999-9999</a></li>
+            <li><i class="fab fa-whatsapp"></i>
+              <a href="https://wa.me/5554999999999" target="_blank" rel="noopener noreferrer">(54) 9 9999-9999</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Linha divisória + copyright -->
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Brasa Viva Restaurante & Churrascaria. Todos os direitos reservados.</p>
+        <p>Desenvolvido com ❤️ para o melhor churrasco de Vacaria.</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ======================================================
+       BOTÃO FLUTUANTE DO WHATSAPP
+  ====================================================== -->
+  <a href="https://wa.me/5554999999999?text=Olá!%20Quero%20fazer%20um%20pedido%20na%20Brasa%20Viva!"
+     class="whatsapp-float" target="_blank" rel="noopener noreferrer"
+     aria-label="Falar no WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span class="whatsapp-tooltip">Fale conosco!</span>
+  </a>
+
+  <!-- Botão Voltar ao Topo -->
+  <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- ===== SCRIPT PRINCIPAL ===== -->
+  <script src="script.js"></script>
+
+</body>
+</html>
